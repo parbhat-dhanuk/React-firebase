@@ -6,8 +6,7 @@ const firebaseConfig = {
     projectId: "e-commerce-8fc90",
     storageBucket: "e-commerce-8fc90.firebasestorage.app",
     messagingSenderId: "193096251056",
-    appId: "1:193096251056:web:939795f772dd6c51842d75",
-    databaseURL: "https://e-commerce-8fc90-default-rtdb.firebaseio.com/",
+    appId: "1:193096251056:web:939795f772dd6c51842d75"
   };
 
   export const app = initializeApp(firebaseConfig)

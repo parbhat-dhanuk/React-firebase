@@ -1,19 +1,23 @@
 
-import {getAuth,createUserWithEmailAndPassword} from 'firebase/auth'
 import {app} from './firebase'
-
+import {GoogleAuthProvider,signInWithPopup,getAuth} from 'firebase/auth'
 const auth=getAuth(app)
+
+const googleProvider= new GoogleAuthProvider()
+
 
 function App() {
  
-  const signupUser=()=>{
- createUserWithEmailAndPassword(auth, 'parbhat@gmail.com',
-   'parbhat123').then(value=>console.log(value))
+  const signupWithGoogle=()=>{
+    signInWithPopup(auth,googleProvider)
   }
+
   return (
    <>
    <h1>Hello firebase</h1>
-   <button onClick={signupUser} >create User</button>
+   <br />
+   <button className="bg-blue-600" onClick={signupWithGoogle}>Signin with google</button>
+  
    
    </>
   )
